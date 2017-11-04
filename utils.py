@@ -1,4 +1,4 @@
-import math, itertools
+import math, itertools, operator
 
 def primes_less_than(n):
     if n < 2:
@@ -84,3 +84,6 @@ def power_set(iterable):
     # straight from https://docs.python.org/2.7/library/itertools.html#recipes
     s = list(iterable)
     return itertools.chain.from_iterable(itertools.combinations(s, r) for r in range(len(s)+1))
+
+def factorial(n):
+    return reduce(operator.mul, xrange(1, n + 1), 1)

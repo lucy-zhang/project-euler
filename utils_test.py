@@ -83,3 +83,13 @@ class TestCountEltsInRange(object):
 class TestPowerSet(object):
     def test_power_set(self):
         assert list(utils.power_set([1, 2, 3])) == [(), (1,), (2,), (3,), (1,2), (1,3), (2,3), (1,2,3)]
+
+class TestFactorial(object):
+    def test_factorial_0(self):
+        assert utils.factorial(0) == 1
+
+    def test_factorial_1(self):
+        assert utils.factorial(1) == 1
+
+    def test_factorial_4(self):
+        assert utils.factorial(4) == 24
